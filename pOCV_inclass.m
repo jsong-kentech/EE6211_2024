@@ -2,7 +2,7 @@ clear
 clc; close all
 
 %% Load DATA
-path_folder = 'G:\Shared drives\EE6211_2024\Data\FCC_(5)_OCV_C100';
+path_folder = 'G:\Shared drives\EE6211_2024\Data\OCV_and_OCP\FCC_(5)_OCV_C100';
 filename = 'HNE_FCC_01_OCV_022.txt';
 savefilename = 'OCV_inclass.mat';
 
@@ -21,8 +21,8 @@ data_now = readtable([path_folder filesep filename],'FileType','text','NumHeader
 figure(1)
 yyaxis left
 plot(data1.t2, data1.V); hold on
-yyaxis right
-plot(data1.t2, data1.step)
+%yyaxis right
+%plot(data1.t2, data1.step)
 
 figure(2)
 plot(data1.t2,data1.I)
